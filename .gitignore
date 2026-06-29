@@ -1,0 +1,6 @@
+# Impeccable design skill (local tooling, not part of the profile)
+.github/skills/
+.github/hooks/
+node_modules/
+__pycache__/
+*.pyc
