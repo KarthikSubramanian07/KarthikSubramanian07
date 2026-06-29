@@ -92,7 +92,7 @@
   <text class="sans slbl" x="290" y="360">systems</text>
   <text class="sans sval" x="410" y="360">CUDA · AWS · Kubernetes · Redis · OpenTelemetry</text>
   <text class="sans slbl" x="290" y="384">hardware</text>
-  <text class="sans sval" x="410" y="384">STM32 · FPGA · Arduino · Raspberry Pi · Jetson</text>
+  <text class="sans sval" x="410" y="384">STM32 · FPGA · Arduino · Raspberry Pi · Talon FX</text>
 
   <text class="sans muted" x="290" y="416">writing · stargazing · philosophy · board games · travel</text>
   <text class="sans slbl" x="290" y="442">email</text>
