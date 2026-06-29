@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="900" height="500" viewBox="0 0 900 500" role="img" aria-label="Karthik Subramanian's GitHub profile">
+  <style>
+    text { font-family: 'JetBrains Mono','Fira Code','SF Mono','Cascadia Code','DejaVu Sans Mono',Consolas,'Courier New',monospace; }
+    .ascii { fill:#58b4cc; font-size:10.5px; }
+    .flame { fill:#c792ea; }
+    .star  { fill:#6e7681; }
+    .user  { fill:#58b4cc; font-size:14px; font-weight:bold; }
+    .host  { fill:#c792ea; font-size:14px; font-weight:bold; }
+    .sep   { fill:#30363d; font-size:12px; }
+    .lbl   { fill:#58b4cc; font-size:12px; }
+    .dot   { fill:#6e7681; font-size:12px; }
+    .val   { fill:#ffffff; font-size:12px; }
+    .sec   { fill:#c792ea; font-size:12px; font-weight:bold; }
+    .txt   { fill:#e6edf3; font-size:12px; }
+    .acc   { fill:#c792ea; font-size:12px; }
+  </style>
+
+  <rect x="0" y="0" width="900" height="500" rx="10" fill="#0d1117"/>
+
+  <!-- decorative starfield -->
+  <g class="star">
+    <circle cx="55" cy="470" r="1"/>
+    <circle cx="120" cy="455" r="1.2"/>
+    <circle cx="30" cy="60" r="1"/>
+    <circle cx="180" cy="30" r="1.2"/>
+    <circle cx="205" cy="120" r="1"/>
+    <circle cx="160" cy="210" r="1"/>
+    <circle cx="40" cy="300" r="1.2"/>
+    <circle cx="210" cy="380" r="1"/>
+    <circle cx="875" cy="30" r="1"/>
+    <circle cx="850" cy="478" r="1.2"/>
+    <circle cx="500" cy="20" r="1"/>
+    <circle cx="600" cy="490" r="1"/>
+  </g>
+
+  <!-- ── Left column: rocket ASCII art ───────────────────────────── -->
+  <text class="ascii" xml:space="preserve" x="20" y="40">
+    <tspan x="20" dy="0">        /\</tspan>
+    <tspan x="20" dy="12">       /  \</tspan>
+    <tspan x="20" dy="12">      /    \</tspan>
+    <tspan x="20" dy="12">     /______\</tspan>
+    <tspan x="20" dy="12">     |      |</tspan>
+    <tspan x="20" dy="12">     |  __  |</tspan>
+    <tspan x="20" dy="12">     | /  \ |</tspan>
+    <tspan x="20" dy="12">     | \__/ |</tspan>
+    <tspan x="20" dy="12">     |      |</tspan>
+    <tspan x="20" dy="12">     |  U   |</tspan>
+    <tspan x="20" dy="12">     |  S   |</tspan>
+    <tspan x="20" dy="12">     |  A   |</tspan>
+    <tspan x="20" dy="12">     |      |</tspan>
+    <tspan x="20" dy="12">    /|      |\</tspan>
+    <tspan x="20" dy="12">   / |      | \</tspan>
+    <tspan x="20" dy="12">  /  |      |  \</tspan>
+    <tspan x="20" dy="12"> /___|      |___\</tspan>
+    <tspan x="20" dy="12">     |      |</tspan>
+    <tspan x="20" dy="12">     |======|</tspan>
+    <tspan x="20" dy="12">     | |==| |</tspan>
+    <tspan x="20" dy="12">     |_|  |_|</tspan>
+    <tspan x="20" dy="12">      ||  ||</tspan>
+    <tspan class="flame" x="20" dy="12">      )(  )(</tspan>
+    <tspan class="flame" x="20" dy="12">     ) (  ) (</tspan>
+    <tspan class="flame" x="20" dy="12">    ( (  )  ) )</tspan>
+    <tspan class="flame" x="20" dy="12">     \  ||  /</tspan>
+    <tspan class="flame" x="20" dy="12">      \ || /</tspan>
+    <tspan class="flame" x="20" dy="12">       \||/</tspan>
+    <tspan class="flame" x="20" dy="12">        \/</tspan>
+    <tspan class="flame" x="20" dy="12">       (  )</tspan>
+    <tspan class="flame" x="20" dy="12">      ( () )</tspan>
+  </text>
+
+  <!-- ── Right column: spacecraft systems readout ────────────────── -->
+  <text xml:space="preserve" x="240" y="36"><tspan class="user">karthik</tspan><tspan class="txt">@</tspan><tspan class="host">berkeley</tspan></text>
+  <text class="sep" xml:space="preserve" x="240" y="51">—————————————————————————————————————————</text>
+
+  <text xml:space="preserve" x="240" y="78"><tspan class="lbl"> Mission: </tspan><tspan class="dot">....... </tspan><tspan class="txt">UC Berkeley EECS </tspan><tspan class="acc">·</tspan><tspan class="txt"> Regents' Scholar</tspan></text>
+  <text xml:space="preserve" x="240" y="93"><tspan class="lbl"> Age: </tspan><tspan class="dot">........... </tspan><tspan class="val" id="age_data">19 years, 0 months, 10 days</tspan></text>
+  <text xml:space="preserve" x="240" y="108"><tspan class="lbl"> Location: </tspan><tspan class="dot">...... </tspan><tspan class="txt">37.8755°N 122.2596°W </tspan><tspan class="acc">·</tspan><tspan class="txt"> Soda Hall</tspan></text>
+
+  <text xml:space="preserve" x="240" y="134"><tspan class="lbl"> Weather: </tspan><tspan class="dot">....... </tspan><tspan class="val" id="weather_data">🌤️ 54°F · mainly clear</tspan></text>
+
+  <text class="sec" xml:space="preserve" x="240" y="160">── Codebase ──────────────────────────────</text>
+  <text xml:space="preserve" x="240" y="175"><tspan class="lbl"> Commits: </tspan><tspan class="dot">....... </tspan><tspan class="val" id="commit_data">947</tspan></text>
+  <text xml:space="preserve" x="240" y="190"><tspan class="lbl"> Stars: </tspan><tspan class="dot">......... </tspan><tspan class="val" id="star_data">0</tspan></text>
+  <text xml:space="preserve" x="240" y="205"><tspan class="lbl"> Repos: </tspan><tspan class="dot">......... </tspan><tspan class="val" id="repo_data">35</tspan></text>
+  <text xml:space="preserve" x="240" y="220"><tspan class="lbl"> Lines: </tspan><tspan class="dot">......... </tspan><tspan class="val" id="loc_add">+11,682,425</tspan><tspan class="txt">  </tspan><tspan class="val" id="loc_del">−4,624,054</tspan></text>
+  <text xml:space="preserve" x="240" y="235"><tspan class="lbl"> On GitHub: </tspan><tspan class="dot">..... </tspan><tspan class="val" id="years_data">4</tspan><tspan class="txt"> years</tspan></text>
+
+  <text class="sec" xml:space="preserve" x="240" y="261">── Languages ─────────────────────────────</text>
+  <text xml:space="preserve" x="240" y="276"><tspan class="lbl"> Software: </tspan><tspan class="dot">...... </tspan><tspan class="val">Python · TypeScript · JavaScript · Java · C · SQL</tspan></text>
+  <text xml:space="preserve" x="240" y="291"><tspan class="lbl"> Frameworks: </tspan><tspan class="dot">.... </tspan><tspan class="val">React · Next.js · Svelte · FastAPI · PyTorch</tspan></text>
+  <text xml:space="preserve" x="240" y="306"><tspan class="lbl"> Systems: </tspan><tspan class="dot">....... </tspan><tspan class="val">CUDA · NVML · Redis · OpenTelemetry · Docker</tspan></text>
+  <text xml:space="preserve" x="240" y="321"><tspan class="lbl"> Hardware: </tspan><tspan class="dot">...... </tspan><tspan class="val">roboRIO · STM32 · Raspberry Pi · FPGA</tspan></text>
+
+  <text class="sec" xml:space="preserve" x="240" y="347">── Interests ─────────────────────────────</text>
+  <text xml:space="preserve" x="240" y="362"><tspan class="txt"> Writing </tspan><tspan class="acc">·</tspan><tspan class="txt"> Board Games </tspan><tspan class="acc">·</tspan><tspan class="txt"> Stargazing </tspan><tspan class="acc">·</tspan><tspan class="txt"> Philosophy </tspan><tspan class="acc">·</tspan><tspan class="txt"> Travel</tspan></text>
+  <text xml:space="preserve" x="240" y="377"><tspan class="txt"> Trivia </tspan><tspan class="acc">·</tspan><tspan class="txt"> History &amp; Geography </tspan><tspan class="acc">·</tspan><tspan class="txt"> Civic Engagement </tspan><tspan class="acc">·</tspan><tspan class="txt"> Film &amp; TV</tspan></text>
+
+  <text class="sec" xml:space="preserve" x="240" y="403">── Contact ───────────────────────────────</text>
+  <text xml:space="preserve" x="240" y="418"><tspan class="lbl"> Email: </tspan><tspan class="dot">......... </tspan><tspan class="val">karthik.subramanian@berkeley.edu</tspan></text>
+  <text xml:space="preserve" x="240" y="433"><tspan class="lbl"> LinkedIn: </tspan><tspan class="dot">...... </tspan><tspan class="val">/in/karthik-subramanian-07</tspan></text>
+  <text xml:space="preserve" x="240" y="448"><tspan class="lbl"> Instagram: </tspan><tspan class="dot">..... </tspan><tspan class="val">@winner.karthik</tspan></text>
+  <text xml:space="preserve" x="240" y="463"><tspan class="lbl"> Discord: </tspan><tspan class="dot">....... </tspan><tspan class="val">karthik07</tspan></text>
+</svg>
