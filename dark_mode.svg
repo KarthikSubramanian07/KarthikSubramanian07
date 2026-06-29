@@ -85,20 +85,22 @@
 
   <line x1="290" y1="266" x2="850" y2="266" stroke="#33312B" stroke-width="1.5"/>
 
-  <text class="sans slbl" x="290" y="292">languages</text>
-  <text class="sans sval" x="410" y="292">Python · TypeScript · C++ · Java · SQL</text>
-  <text class="sans slbl" x="290" y="314">frameworks</text>
-  <text class="sans sval" x="410" y="314">React · Next.js · FastAPI · Express · Svelte</text>
-  <text class="sans slbl" x="290" y="336">ai / ml</text>
-  <text class="sans sval" x="410" y="336">PyTorch · CUDA · Claude · Fetch.ai · Streamlit</text>
-  <text class="sans slbl" x="290" y="358">cloud &amp; infra</text>
-  <text class="sans sval" x="410" y="358">AWS · Docker · Kubernetes · Redis · OpenTelemetry</text>
-  <text class="sans slbl" x="290" y="380">hardware</text>
-  <text class="sans sval" x="410" y="380">STM32 · FPGA · Arduino · Raspberry Pi · Talon FX</text>
+  <text class="sans slbl" x="290" y="290">languages</text>
+  <text class="sans sval" x="426" y="290">Rust · Python · TypeScript · C++ · Swift · Kotlin</text>
+  <text class="sans slbl" x="290" y="310">web &amp; realtime</text>
+  <text class="sans sval" x="426" y="310">Next.js · React Native · WebRTC · LiveKit · Three.js</text>
+  <text class="sans slbl" x="290" y="330">backends &amp; data</text>
+  <text class="sans sval" x="426" y="330">PostgreSQL · pgvector · GraphQL · FastAPI · Redis</text>
+  <text class="sans slbl" x="290" y="350">cloud &amp; infra</text>
+  <text class="sans sval" x="426" y="350">AWS · Kubernetes · Docker · BigQuery · Cloudflare</text>
+  <text class="sans slbl" x="290" y="370">ai / ml &amp; agents</text>
+  <text class="sans sval" x="426" y="370">PyTorch · CUDA · Claude · YOLO · Whisper · Groq</text>
+  <text class="sans slbl" x="290" y="390">hardware</text>
+  <text class="sans sval" x="426" y="390">STM32 · FPGA · Arduino · Raspberry Pi · Talon FX</text>
 
-  <text class="sans muted" x="290" y="410">writing · stargazing · philosophy · board games · travel</text>
-  <text class="sans slbl" x="290" y="436">email</text>
-  <text class="sans sval" x="372" y="436" font-size="12px">karthik [dot] subramanian [at] berkeley [dot] edu</text>
-  <text class="sans slbl" x="290" y="456">links</text>
-  <text class="sans sval" x="372" y="456" font-size="12px">/in/karthik-subramanian-07 · @winner.karthik · karthik07</text>
+  <text class="sans muted" x="290" y="418">writing · stargazing · philosophy · board games · travel</text>
+  <text class="sans slbl" x="290" y="441">email</text>
+  <text class="sans sval" x="372" y="441" font-size="12px">karthik [dot] subramanian [at] berkeley [dot] edu</text>
+  <text class="sans slbl" x="290" y="461">links</text>
+  <text class="sans sval" x="372" y="461" font-size="12px">/in/karthik-subramanian-07 · @winner.karthik · karthik07</text>
 </svg>
