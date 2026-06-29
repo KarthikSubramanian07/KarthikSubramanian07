@@ -64,39 +64,41 @@
   </g>
 
   <!-- ════════ Right: content (lowercase chrome; tech names keep their casing) ════════ -->
-  <text class="serif name" x="288" y="94">karthik subramanian</text>
-  <text class="sans role" x="290" y="117">eecs @ uc berkeley<tspan fill="#A39C8C">  ·  </tspan><tspan class="accent">regents' scholar</tspan><tspan fill="#A39C8C">  ·  founder · engineer · researcher</tspan></text>
+  <text class="serif name" x="288" y="88">karthik subramanian</text>
+  <text class="sans role" x="290" y="111">eecs @ uc berkeley<tspan fill="#A39C8C">  ·  </tspan><tspan class="accent">regents' scholar</tspan><tspan fill="#A39C8C">  ·  founder · engineer · researcher</tspan></text>
 
-  <line x1="290" y1="135" x2="850" y2="135" stroke="#33312B" stroke-width="1.5"/>
+  <line x1="290" y1="129" x2="850" y2="129" stroke="#33312B" stroke-width="1.5"/>
 
-  <text class="sans klbl" x="290" y="164">age</text>
-  <text class="sans kval" id="age_data" x="372" y="165">19 years, 0 months, 10 days</text>
-  <text class="sans klbl" x="290" y="187">weather</text>
-  <text class="sans kval" id="weather_data" x="372" y="188">☀️ 67°F · clear sky</text>
+  <text class="sans klbl" x="290" y="156">age</text>
+  <text class="sans kval" id="age_data" x="372" y="157">19 years, 0 months, 10 days</text>
+  <text class="sans klbl" x="290" y="178">weather</text>
+  <text class="sans kval" id="weather_data" x="372" y="179">☀️ 68°F · clear sky</text>
 
-  <text class="serif num" id="commit_data" x="290" y="240">963</text>
-  <text class="sans klbl" x="291" y="258">commits</text>
-  <text class="serif num" id="star_data" x="406" y="240">0</text>
-  <text class="sans klbl" x="407" y="258">stars</text>
-  <text class="serif num" id="repo_data" x="522" y="240">35</text>
-  <text class="sans klbl" x="523" y="258">repos</text>
-  <text class="serif num" id="years_data" x="638" y="240">4</text>
-  <text class="sans klbl" x="639" y="258">on github</text>
+  <text class="serif num" id="commit_data" x="290" y="224">968</text>
+  <text class="sans klbl" x="291" y="242">commits</text>
+  <text class="serif num" id="contrib_data" x="406" y="224">705</text>
+  <text class="sans klbl" x="407" y="242">this year</text>
+  <text class="serif num" id="repo_data" x="556" y="224">35</text>
+  <text class="sans klbl" x="557" y="242">repos</text>
+  <text class="serif num" id="years_data" x="672" y="224">4</text>
+  <text class="sans klbl" x="673" y="242">on github</text>
 
-  <line x1="290" y1="284" x2="850" y2="284" stroke="#33312B" stroke-width="1.5"/>
+  <line x1="290" y1="266" x2="850" y2="266" stroke="#33312B" stroke-width="1.5"/>
 
-  <text class="sans slbl" x="290" y="312">languages</text>
-  <text class="sans sval" x="410" y="312">Python · TypeScript · C++ · Java · SQL</text>
-  <text class="sans slbl" x="290" y="336">frameworks</text>
-  <text class="sans sval" x="410" y="336">React · Next.js · FastAPI · PyTorch · Svelte</text>
-  <text class="sans slbl" x="290" y="360">systems</text>
-  <text class="sans sval" x="410" y="360">CUDA · AWS · Kubernetes · Redis · OpenTelemetry</text>
-  <text class="sans slbl" x="290" y="384">hardware</text>
-  <text class="sans sval" x="410" y="384">STM32 · FPGA · Arduino · Raspberry Pi · Talon FX</text>
+  <text class="sans slbl" x="290" y="292">languages</text>
+  <text class="sans sval" x="410" y="292">Python · TypeScript · C++ · Java · SQL</text>
+  <text class="sans slbl" x="290" y="314">frameworks</text>
+  <text class="sans sval" x="410" y="314">React · Next.js · FastAPI · Express · Svelte</text>
+  <text class="sans slbl" x="290" y="336">ai / ml</text>
+  <text class="sans sval" x="410" y="336">PyTorch · CUDA · Claude · Fetch.ai · Streamlit</text>
+  <text class="sans slbl" x="290" y="358">cloud &amp; infra</text>
+  <text class="sans sval" x="410" y="358">AWS · Docker · Kubernetes · Redis · OpenTelemetry</text>
+  <text class="sans slbl" x="290" y="380">hardware</text>
+  <text class="sans sval" x="410" y="380">STM32 · FPGA · Arduino · Raspberry Pi · Talon FX</text>
 
-  <text class="sans muted" x="290" y="416">writing · stargazing · philosophy · board games · travel</text>
-  <text class="sans slbl" x="290" y="442">email</text>
-  <text class="sans sval" x="372" y="442" font-size="12px">karthik [dot] subramanian [at] berkeley [dot] edu</text>
-  <text class="sans slbl" x="290" y="462">links</text>
-  <text class="sans sval" x="372" y="462" font-size="12px">/in/karthik-subramanian-07 · @winner.karthik · karthik07</text>
+  <text class="sans muted" x="290" y="410">writing · stargazing · philosophy · board games · travel</text>
+  <text class="sans slbl" x="290" y="436">email</text>
+  <text class="sans sval" x="372" y="436" font-size="12px">karthik [dot] subramanian [at] berkeley [dot] edu</text>
+  <text class="sans slbl" x="290" y="456">links</text>
+  <text class="sans sval" x="372" y="456" font-size="12px">/in/karthik-subramanian-07 · @winner.karthik · karthik07</text>
 </svg>

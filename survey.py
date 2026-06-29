@@ -160,31 +160,6 @@ def total_repos():
     return request.json()["data"]["user"]["repositories"]["totalCount"]
 
 
-def total_stars():
-    """Sum stargazers across all repositories the user owns (paginating)."""
-    cursor = None
-    running_total = 0
-    while True:
-        query_count("graph_repos_stars")
-        query = """
-        query ($login: String!, $cursor: String) {
-            user(login: $login) {
-                repositories(first: 100, after: $cursor, ownerAffiliations: OWNER) {
-                    edges { node { ... on Repository { stargazers { totalCount } } } }
-                    pageInfo { endCursor hasNextPage }
-                }
-            }
-        }"""
-        variables = {"login": USER_NAME, "cursor": cursor}
-        repos = simple_request("total_stars", query, variables).json()["data"]["user"]["repositories"]
-        for node in repos["edges"]:
-            running_total += node["node"]["stargazers"]["totalCount"]
-        if repos["pageInfo"]["hasNextPage"]:
-            cursor = repos["pageInfo"]["endCursor"]
-        else:
-            return running_total
-
-
 # ── Weather (Open-Meteo, no API key) ──────────────────────────────────────────
 WMO_CODES = {
     0: ("☀️", "clear sky"), 1: ("🌤️", "mainly clear"), 2: ("⛅", "partly cloudy"),
@@ -227,12 +202,12 @@ def find_and_replace(root, element_id, new_text):
         print(f"  [warn] no SVG element with id='{element_id}'")
 
 
-def svg_overwrite(filename, age_data, commit_data, star_data, repo_data, years_data, weather_data):
+def svg_overwrite(filename, age_data, commit_data, contrib_data, repo_data, years_data, weather_data):
     tree = etree.parse(filename)
     root = tree.getroot()
     find_and_replace(root, "age_data", age_data)
     find_and_replace(root, "commit_data", commit_data)
-    find_and_replace(root, "star_data", star_data)
+    find_and_replace(root, "contrib_data", contrib_data)
     find_and_replace(root, "repo_data", repo_data)
     find_and_replace(root, "years_data", years_data)
     find_and_replace(root, "weather_data", weather_data)
@@ -251,7 +226,9 @@ def main():
     age_data = daily_readme(BIRTHDAY)
     years_data = str(account_age_years(created_dt))
     commit_data = format_number(total_commits(created_at))
-    star_data = format_number(total_stars())
+    now = datetime.datetime.now(timezone.utc)
+    year_ago = (now - relativedelta.relativedelta(years=1)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    contrib_data = format_number(graph_commits(year_ago, now.strftime("%Y-%m-%dT%H:%M:%SZ")))
     repo_data = format_number(total_repos())
 
     print("Fetching weather…")
@@ -259,19 +236,19 @@ def main():
 
     for svg in ("light_mode.svg", "dark_mode.svg"):
         if os.path.exists(svg):
-            svg_overwrite(svg, age_data, commit_data, star_data, repo_data, years_data, weather_data)
+            svg_overwrite(svg, age_data, commit_data, contrib_data, repo_data, years_data, weather_data)
             print(f"Updated {svg}")
         else:
             print(f"  [warn] {svg} not found; skipping")
 
     print("\nDone.")
-    print(f"  Age:      {age_data}")
-    print(f"  Commits:  {commit_data}")
-    print(f"  Stars:    {star_data}")
-    print(f"  Repos:    {repo_data}")
-    print(f"  Years:    {years_data}")
-    print(f"  Weather:  {weather_data}")
-    print(f"  Queries:  {QUERY_COUNT}")
+    print(f"  Age:       {age_data}")
+    print(f"  Commits:   {commit_data}")
+    print(f"  This year: {contrib_data}")
+    print(f"  Repos:     {repo_data}")
+    print(f"  Years:     {years_data}")
+    print(f"  Weather:   {weather_data}")
+    print(f"  Queries:   {QUERY_COUNT}")
 
 
 if __name__ == "__main__":
