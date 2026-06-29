@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="880" height="500" viewBox="0 0 880 500" role="img" aria-label="Karthik Subramanian — GitHub profile">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="880" height="500" viewBox="0 0 880 500" role="img" aria-label="karthik subramanian — GitHub profile">
   <style>
     .serif { font-family: Georgia, 'Times New Roman', 'Iowan Old Style', serif; }
     .sans  { font-family: 'Helvetica Neue', Helvetica, Arial, 'Segoe UI', sans-serif; }
-    .name  { fill:#EDE9DF; font-size:34px; letter-spacing:0.2px; }
+    .name  { fill:#ECE8DF; font-size:34px; letter-spacing:0.2px; }
     .role  { fill:#A39C8C; font-size:13.5px; }
     .klbl  { fill:#6E685B; font-size:10px; letter-spacing:1.4px; }
-    .kval  { fill:#EDE9DF; font-size:13px; }
-    .num   { fill:#EDE9DF; font-size:26px; font-variant-numeric:tabular-nums; }
+    .kval  { fill:#ECE8DF; font-size:13px; }
+    .num   { fill:#ECE8DF; font-size:26px; font-variant-numeric:tabular-nums; }
     .slbl  { fill:#D97757; font-size:10px; letter-spacing:1.4px; }
     .sval  { fill:#CFC9BC; font-size:13px; }
     .muted { fill:#A39C8C; font-size:11.5px; }
@@ -49,58 +49,54 @@
   </g>
 
   <!-- planet with ring -->
-  <ellipse cx="120" cy="318" rx="92" ry="25" transform="rotate(-20 120 318)" fill="none" stroke="#EDE9DF" stroke-width="2" opacity="0.85"/>
+  <ellipse cx="120" cy="318" rx="92" ry="25" transform="rotate(-20 120 318)" fill="none" stroke="#ECE8DF" stroke-width="2" opacity="0.85"/>
   <circle cx="120" cy="318" r="50" fill="#D97757"/>
-  <path d="M83 284 a50 50 0 0 0 17 65 q22 -36 -17 -65 Z" fill="#EDE9DF" opacity="0.12"/>
-  <ellipse cx="120" cy="318" rx="92" ry="25" transform="rotate(-20 120 318)" fill="none" stroke="#EDE9DF" stroke-width="2" opacity="0.85" stroke-dasharray="150 420"/>
+  <path d="M83 284 a50 50 0 0 0 17 65 q22 -36 -17 -65 Z" fill="#ECE8DF" opacity="0.12"/>
+  <ellipse cx="120" cy="318" rx="92" ry="25" transform="rotate(-20 120 318)" fill="none" stroke="#ECE8DF" stroke-width="2" opacity="0.85" stroke-dasharray="150 420"/>
 
   <!-- rocket -->
   <g class="rocket">
-    <path d="M120 120 C108 134 104 154 104 182 L104 200 C104 212 136 212 136 200 L136 182 C136 154 132 134 120 120 Z" fill="#EDE9DF"/>
+    <path d="M120 120 C108 134 104 154 104 182 L104 200 C104 212 136 212 136 200 L136 182 C136 154 132 134 120 120 Z" fill="#ECE8DF"/>
     <path d="M104 186 L90 214 L104 206 Z" fill="#D97757"/>
     <path d="M136 186 L150 214 L136 206 Z" fill="#D97757"/>
     <path class="flame" d="M120 208 C128 219 126 235 120 242 C114 235 112 219 120 208 Z" fill="#D97757"/>
     <circle cx="120" cy="164" r="9" fill="#1C1B17" stroke="#D97757" stroke-width="2.5"/>
   </g>
 
-  <!-- ════════ Right: content ════════ -->
-  <text class="serif name" x="288" y="94">Karthik Subramanian</text>
-  <text class="sans role" x="290" y="117">EECS @ UC Berkeley<tspan fill="#A39C8C">  ·  </tspan><tspan class="accent">Regents' Scholar</tspan><tspan fill="#A39C8C">  ·  founder · engineer · researcher</tspan></text>
+  <!-- ════════ Right: content (lowercase chrome; tech names keep their casing) ════════ -->
+  <text class="serif name" x="288" y="94">karthik subramanian</text>
+  <text class="sans role" x="290" y="117">eecs @ uc berkeley<tspan fill="#A39C8C">  ·  </tspan><tspan class="accent">regents' scholar</tspan><tspan fill="#A39C8C">  ·  founder · engineer · researcher</tspan></text>
 
   <line x1="290" y1="135" x2="850" y2="135" stroke="#33312B" stroke-width="1.5"/>
 
-  <!-- live telemetry -->
-  <text class="sans klbl" x="290" y="164">AGE</text>
+  <text class="sans klbl" x="290" y="164">age</text>
   <text class="sans kval" id="age_data" x="372" y="165">19 years, 0 months, 10 days</text>
-  <text class="sans klbl" x="290" y="187">WEATHER</text>
-  <text class="sans kval" id="weather_data" x="372" y="188">🌤️ 58°F · mainly clear</text>
+  <text class="sans klbl" x="290" y="187">weather</text>
+  <text class="sans kval" id="weather_data" x="372" y="188">☀️ 67°F · clear sky</text>
 
-  <!-- stat band -->
-  <text class="serif num" id="commit_data" x="290" y="240">954</text>
-  <text class="sans klbl" x="291" y="258">COMMITS</text>
+  <text class="serif num" id="commit_data" x="290" y="240">963</text>
+  <text class="sans klbl" x="291" y="258">commits</text>
   <text class="serif num" id="star_data" x="406" y="240">0</text>
-  <text class="sans klbl" x="407" y="258">STARS</text>
+  <text class="sans klbl" x="407" y="258">stars</text>
   <text class="serif num" id="repo_data" x="522" y="240">35</text>
-  <text class="sans klbl" x="523" y="258">REPOS</text>
+  <text class="sans klbl" x="523" y="258">repos</text>
   <text class="serif num" id="years_data" x="638" y="240">4</text>
-  <text class="sans klbl" x="639" y="258">ON GITHUB</text>
+  <text class="sans klbl" x="639" y="258">on github</text>
 
   <line x1="290" y1="284" x2="850" y2="284" stroke="#33312B" stroke-width="1.5"/>
 
-  <!-- stack (curated highlights; full stack lives on the site) -->
-  <text class="sans slbl" x="290" y="312">LANGUAGES</text>
-  <text class="sans sval" x="410" y="312">Python · Java · TypeScript · C++ · SQL</text>
-  <text class="sans slbl" x="290" y="336">FRAMEWORKS</text>
+  <text class="sans slbl" x="290" y="312">languages</text>
+  <text class="sans sval" x="410" y="312">Python · TypeScript · C++ · Java · SQL</text>
+  <text class="sans slbl" x="290" y="336">frameworks</text>
   <text class="sans sval" x="410" y="336">React · Next.js · FastAPI · PyTorch · Svelte</text>
-  <text class="sans slbl" x="290" y="360">SYSTEMS</text>
-  <text class="sans sval" x="410" y="360">CUDA · AWS · Docker · Redis · OpenTelemetry</text>
-  <text class="sans slbl" x="290" y="384">HARDWARE</text>
-  <text class="sans sval" x="410" y="384">roboRIO · STM32 · Arduino · Raspberry Pi · FPGA</text>
+  <text class="sans slbl" x="290" y="360">systems</text>
+  <text class="sans sval" x="410" y="360">CUDA · AWS · Kubernetes · Redis · OpenTelemetry</text>
+  <text class="sans slbl" x="290" y="384">hardware</text>
+  <text class="sans sval" x="410" y="384">STM32 · FPGA · Arduino · Raspberry Pi · Jetson</text>
 
-  <!-- footer -->
-  <text class="sans muted" x="290" y="416">Writing · Stargazing · Philosophy · Board Games · Travel</text>
-  <text class="sans slbl" x="290" y="442">EMAIL</text>
+  <text class="sans muted" x="290" y="416">writing · stargazing · philosophy · board games · travel</text>
+  <text class="sans slbl" x="290" y="442">email</text>
   <text class="sans sval" x="372" y="442" font-size="12px">karthik [dot] subramanian [at] berkeley [dot] edu</text>
-  <text class="sans slbl" x="290" y="462">LINKS</text>
+  <text class="sans slbl" x="290" y="462">links</text>
   <text class="sans sval" x="372" y="462" font-size="12px">/in/karthik-subramanian-07 · @winner.karthik · karthik07</text>
 </svg>
