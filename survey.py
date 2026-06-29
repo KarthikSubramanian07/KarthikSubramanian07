@@ -42,7 +42,6 @@ WEATHER_LON = -122.2596
 
 QUERY_COUNT = {
     "user_getter": 0,
-    "follower_getter": 0,
     "graph_repos_stars": 0,
     "recursive_loc": 0,
     "graph_commits": 0,
@@ -146,19 +145,6 @@ def user_getter(username):
     return {"id": user["id"]}, user["createdAt"]
 
 
-def follower_getter(username):
-    """Total followers (not displayed by default but cheap to fetch)."""
-    query_count("follower_getter")
-    query = """
-    query($login: String!){
-        user(login: $login) {
-            followers { totalCount }
-        }
-    }"""
-    request = simple_request(follower_getter.__name__, query, {"login": username})
-    return int(request.json()["data"]["user"]["followers"]["totalCount"])
-
-
 # ── GitHub: commits (all time, incl. collaborator/org repos) ─────────────────
 def graph_commits(start_date, end_date):
     """Total commit contributions in [start_date, end_date] for the user."""
@@ -203,50 +189,21 @@ def total_commits(created_at):
 
 
 # ── GitHub: repos + stars ────────────────────────────────────────────────────
-def graph_repos_stars(count_type, owner_affiliation, cursor=None):
-    """Count owned repos or sum their stargazers, paginating with a cursor."""
+def total_repos(owner_affiliation=None):
+    """Total number of repositories for the given affiliations (default: owned)."""
     query_count("graph_repos_stars")
     query = """
-    query ($owner_affiliation: [RepositoryAffiliation], $login: String!, $cursor: String) {
+    query ($owner_affiliation: [RepositoryAffiliation], $login: String!) {
         user(login: $login) {
-            repositories(first: 100, after: $cursor, ownerAffiliations: $owner_affiliation) {
-                totalCount
-                edges {
-                    node {
-                        ... on Repository {
-                            nameWithOwner
-                            stargazers { totalCount }
-                        }
-                    }
-                }
-                pageInfo { endCursor hasNextPage }
-            }
+            repositories(ownerAffiliations: $owner_affiliation) { totalCount }
         }
     }"""
     variables = {
-        "owner_affiliation": owner_affiliation,
+        "owner_affiliation": owner_affiliation or ["OWNER"],
         "login": USER_NAME,
-        "cursor": cursor,
     }
-    request = simple_request(graph_repos_stars.__name__, query, variables)
-    repos = request.json()["data"]["user"]["repositories"]
-    if count_type == "repos":
-        return repos["totalCount"]
-    if count_type == "stars":
-        return stars_counter(repos["edges"], owner_affiliation, repos["pageInfo"])
-
-
-def stars_counter(edges, owner_affiliation, page_info, running_total=0):
-    """Recursively sum stargazers across all pages of repositories."""
-    for node in edges:
-        running_total += node["node"]["stargazers"]["totalCount"]
-    if page_info["hasNextPage"]:
-        next_edges = graph_repos_stars(
-            "stars_page", owner_affiliation, page_info["endCursor"]
-        )
-        # graph_repos_stars("stars_page", ...) returns the raw repos block:
-        return running_total  # handled below via _stars_paged
-    return running_total
+    request = simple_request("total_repos", query, variables)
+    return request.json()["data"]["user"]["repositories"]["totalCount"]
 
 
 def total_stars():
@@ -274,11 +231,6 @@ def total_stars():
         else:
             break
     return running_total
-
-
-def total_repos():
-    """Total count of repositories the user owns."""
-    return graph_repos_stars("repos", ["OWNER"])
 
 
 # ── GitHub: lines of code (with caching) ─────────────────────────────────────

@@ -77,7 +77,7 @@
   <text class="sans kval" id="weather_data" x="372" y="188">🌤️ 54°F · mainly clear</text>
 
   <!-- stat band -->
-  <text class="serif num" id="commit_data" x="290" y="238">948</text>
+  <text class="serif num" id="commit_data" x="290" y="238">951</text>
   <text class="sans klbl" x="291" y="256">COMMITS</text>
   <text class="serif num" id="star_data" x="406" y="238">0</text>
   <text class="sans klbl" x="407" y="256">STARS</text>
@@ -86,7 +86,7 @@
   <text class="serif num" id="years_data" x="638" y="238">4</text>
   <text class="sans klbl" x="639" y="256">ON GITHUB</text>
 
-  <text class="sans muted" x="290" y="284">Lines of code<tspan class="sans accent" id="loc_add" font-size="12.5px">+11,683,486</tspan><tspan class="sans muted"> / </tspan><tspan class="sans" fill="#837D70" id="loc_del" font-size="12.5px">−4,624,070</tspan></text>
+  <text class="sans muted" x="290" y="284">Lines of code   <tspan class="sans accent" id="loc_add" font-size="12.5px">+11,683,684</tspan><tspan class="sans muted"> / </tspan><tspan class="sans" fill="#837D70" id="loc_del" font-size="12.5px">−4,624,252</tspan></text>
 
   <line x1="290" y1="304" x2="850" y2="304" stroke="#E5E1D6" stroke-width="1.5"/>
 
