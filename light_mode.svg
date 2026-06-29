@@ -43,7 +43,6 @@
   <path class="accent star" style="animation-delay:0.7s" d="M168 150 C168 158 168 158 176 160 C168 162 168 162 168 170 C168 162 168 162 160 160 C168 158 168 158 168 150 Z"/>
   <path class="accent star" style="animation-delay:1.9s" d="M52 332 C52 338 52 338 58 340 C52 342 52 342 52 348 C52 342 52 342 46 340 C52 338 52 338 52 332 Z"/>
 
-  <!-- shooting star -->
   <g class="shoot">
     <line x1="40" y1="60" x2="64" y2="72" stroke="#D97757" stroke-width="1.6" stroke-linecap="round"/>
     <circle cx="64" cy="72" r="1.8" fill="#D97757"/>
@@ -66,7 +65,7 @@
 
   <!-- ════════ Right: content ════════ -->
   <text class="serif name" x="288" y="94">Karthik Subramanian</text>
-  <text class="sans role" x="290" y="117">EECS @ UC Berkeley<tspan fill="#837D70">  ·  </tspan><tspan class="accent">Regents' Scholar</tspan><tspan fill="#837D70">  ·  Soda Hall, Berkeley</tspan></text>
+  <text class="sans role" x="290" y="117">EECS @ UC Berkeley<tspan fill="#837D70">  ·  </tspan><tspan class="accent">Regents' Scholar</tspan><tspan fill="#837D70">  ·  founder · engineer · researcher</tspan></text>
 
   <line x1="290" y1="135" x2="850" y2="135" stroke="#E5E1D6" stroke-width="1.5"/>
 
@@ -74,36 +73,34 @@
   <text class="sans klbl" x="290" y="164">AGE</text>
   <text class="sans kval" id="age_data" x="372" y="165">19 years, 0 months, 10 days</text>
   <text class="sans klbl" x="290" y="187">WEATHER</text>
-  <text class="sans kval" id="weather_data" x="372" y="188">🌤️ 54°F · mainly clear</text>
+  <text class="sans kval" id="weather_data" x="372" y="188">🌤️ 58°F · mainly clear</text>
 
   <!-- stat band -->
-  <text class="serif num" id="commit_data" x="290" y="238">951</text>
-  <text class="sans klbl" x="291" y="256">COMMITS</text>
-  <text class="serif num" id="star_data" x="406" y="238">0</text>
-  <text class="sans klbl" x="407" y="256">STARS</text>
-  <text class="serif num" id="repo_data" x="522" y="238">35</text>
-  <text class="sans klbl" x="523" y="256">REPOS</text>
-  <text class="serif num" id="years_data" x="638" y="238">4</text>
-  <text class="sans klbl" x="639" y="256">ON GITHUB</text>
+  <text class="serif num" id="commit_data" x="290" y="240">954</text>
+  <text class="sans klbl" x="291" y="258">COMMITS</text>
+  <text class="serif num" id="star_data" x="406" y="240">0</text>
+  <text class="sans klbl" x="407" y="258">STARS</text>
+  <text class="serif num" id="repo_data" x="522" y="240">35</text>
+  <text class="sans klbl" x="523" y="258">REPOS</text>
+  <text class="serif num" id="years_data" x="638" y="240">4</text>
+  <text class="sans klbl" x="639" y="258">ON GITHUB</text>
 
-  <text class="sans muted" x="290" y="284">Lines of code   <tspan class="sans accent" id="loc_add" font-size="12.5px">+11,683,684</tspan><tspan class="sans muted"> / </tspan><tspan class="sans" fill="#837D70" id="loc_del" font-size="12.5px">−4,624,252</tspan></text>
+  <line x1="290" y1="284" x2="850" y2="284" stroke="#E5E1D6" stroke-width="1.5"/>
 
-  <line x1="290" y1="304" x2="850" y2="304" stroke="#E5E1D6" stroke-width="1.5"/>
-
-  <!-- stack -->
-  <text class="sans slbl" x="290" y="332">LANGUAGES</text>
-  <text class="sans sval" x="410" y="332">Python · TypeScript · JavaScript · Java · C · SQL</text>
-  <text class="sans slbl" x="290" y="356">FRAMEWORKS</text>
-  <text class="sans sval" x="410" y="356">React · Next.js · Svelte · FastAPI · PyTorch</text>
-  <text class="sans slbl" x="290" y="380">SYSTEMS</text>
-  <text class="sans sval" x="410" y="380">CUDA · NVML · Redis · OpenTelemetry · Docker</text>
-  <text class="sans slbl" x="290" y="404">HARDWARE</text>
-  <text class="sans sval" x="410" y="404">roboRIO · STM32 · Raspberry Pi · FPGA</text>
+  <!-- stack (curated highlights; full stack lives on the site) -->
+  <text class="sans slbl" x="290" y="312">LANGUAGES</text>
+  <text class="sans sval" x="410" y="312">Python · Java · TypeScript · C++ · SQL</text>
+  <text class="sans slbl" x="290" y="336">FRAMEWORKS</text>
+  <text class="sans sval" x="410" y="336">React · Next.js · FastAPI · PyTorch · Svelte</text>
+  <text class="sans slbl" x="290" y="360">SYSTEMS</text>
+  <text class="sans sval" x="410" y="360">CUDA · AWS · Docker · Redis · OpenTelemetry</text>
+  <text class="sans slbl" x="290" y="384">HARDWARE</text>
+  <text class="sans sval" x="410" y="384">roboRIO · STM32 · Arduino · Raspberry Pi · FPGA</text>
 
   <!-- footer -->
-  <text class="sans muted" x="290" y="438">Writing · Stargazing · Philosophy · Board Games · Travel</text>
-  <text class="sans slbl" x="290" y="464">EMAIL</text>
-  <text class="sans sval" x="372" y="464" font-size="12px">karthik.subramanian@berkeley.edu</text>
-  <text class="sans slbl" x="290" y="484">LINKS</text>
-  <text class="sans sval" x="372" y="484" font-size="12px">/in/karthik-subramanian-07 · @winner.karthik · karthik07</text>
+  <text class="sans muted" x="290" y="416">Writing · Stargazing · Philosophy · Board Games · Travel</text>
+  <text class="sans slbl" x="290" y="442">EMAIL</text>
+  <text class="sans sval" x="372" y="442" font-size="12px">karthik [dot] subramanian [at] berkeley [dot] edu</text>
+  <text class="sans slbl" x="290" y="462">LINKS</text>
+  <text class="sans sval" x="372" y="462" font-size="12px">/in/karthik-subramanian-07 · @winner.karthik · karthik07</text>
 </svg>
