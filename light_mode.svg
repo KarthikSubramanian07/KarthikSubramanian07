@@ -73,10 +73,10 @@
   <text class="sans klbl" x="290" y="164">AGE</text>
   <text class="sans kval" id="age_data" x="372" y="165">19 years, 0 months, 10 days</text>
   <text class="sans klbl" x="290" y="187">WEATHER</text>
-  <text class="sans kval" id="weather_data" x="372" y="188">🌤️ 58°F · mainly clear</text>
+  <text class="sans kval" id="weather_data" x="372" y="188">🌤️ 59°F · mainly clear</text>
 
   <!-- stat band -->
-  <text class="serif num" id="commit_data" x="290" y="240">954</text>
+  <text class="serif num" id="commit_data" x="290" y="240">957</text>
   <text class="sans klbl" x="291" y="258">COMMITS</text>
   <text class="serif num" id="star_data" x="406" y="240">0</text>
   <text class="sans klbl" x="407" y="258">STARS</text>
