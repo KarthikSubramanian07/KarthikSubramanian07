@@ -70,15 +70,15 @@
   <line x1="290" y1="129" x2="850" y2="129" stroke="#33312B" stroke-width="1.5"/>
 
   <text class="sans klbl" x="290" y="156">age</text>
-  <text class="sans kval" id="age_data" x="372" y="157">19 years, 0 months, 17 days</text>
+  <text class="sans kval" id="age_data" x="372" y="157">19 years, 0 months, 18 days</text>
   <text class="sans klbl" x="290" y="178">weather</text>
   <text class="sans kval" id="weather_data" x="372" y="179">🌫️ 55°F · fog</text>
 
-  <text class="serif num" id="commit_data" x="290" y="224">1,101</text>
+  <text class="serif num" id="commit_data" x="290" y="224">1,167</text>
   <text class="sans klbl" x="291" y="242">commits</text>
-  <text class="serif num" id="contrib_data" x="406" y="224">836</text>
+  <text class="serif num" id="contrib_data" x="406" y="224">902</text>
   <text class="sans klbl" x="407" y="242">this year</text>
-  <text class="serif num" id="repo_data" x="556" y="224">40</text>
+  <text class="serif num" id="repo_data" x="556" y="224">41</text>
   <text class="sans klbl" x="557" y="242">repos</text>
   <text class="serif num" id="years_data" x="672" y="224">4</text>
   <text class="sans klbl" x="673" y="242">on github</text>
