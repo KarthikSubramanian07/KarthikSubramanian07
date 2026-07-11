@@ -204,7 +204,8 @@ def get_weather():
         code = int(current["weather_code"])
         emoji, desc = WMO_CODES.get(code, ("🛰️", "unknown"))
         return f"{emoji} {temp}°F · {desc}"
-    except Exception:
+    except Exception as exc:
+        print(f"  [warn] weather fetch failed: {exc}")
         return "🛰️ unavailable"
 
 
