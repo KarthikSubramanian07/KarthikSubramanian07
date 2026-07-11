@@ -86,17 +86,17 @@
   <line x1="290" y1="266" x2="840" y2="266" stroke="#33312B" stroke-width="1.5"/>
 
   <text class="sans slbl" x="290" y="289">languages</text>
-  <text class="sans sval" x="426" y="289">Rust · Python · TypeScript · C++ · C · Swift · Kotlin · Java</text>
+  <text class="sans sval" x="426" y="289">Rust · Python · TypeScript · C++ · Swift · Kotlin · Java</text>
   <text class="sans slbl" x="290" y="308">web &amp; realtime</text>
-  <text class="sans sval" x="426" y="308">Next.js · React Native · WebRTC · LiveKit · Three.js · Mapbox · Svelte</text>
+  <text class="sans sval" x="426" y="308">Next.js · React Native · WebRTC · LiveKit · Three.js · Mapbox · Deck.gl</text>
   <text class="sans slbl" x="290" y="327">backends &amp; data</text>
   <text class="sans sval" x="426" y="327">PostgreSQL · pgvector · GraphQL · FastAPI · Redis · PySpark · Polars</text>
   <text class="sans slbl" x="290" y="346">cloud &amp; infra</text>
-  <text class="sans sval" x="426" y="346">AWS · Kubernetes · Docker · BigQuery · Cloudflare · Google Cloud · Dagster</text>
-  <text class="sans slbl" x="290" y="365">ai / ml &amp; agents</text>
+  <text class="sans sval" x="426" y="346">AWS · Kubernetes · Docker · BigQuery · Cloudflare · OpenTelemetry · Dagster</text>
+  <text class="sans slbl" x="290" y="365">ai / ml</text>
   <text class="sans sval" x="426" y="365">PyTorch · CUDA · TensorFlow · XGBoost · YOLO · OpenCV · Hugging Face</text>
   <text class="sans slbl" x="290" y="384">hardware</text>
-  <text class="sans sval" x="426" y="384">STM32 · FPGA · WPILib · Talon FX · SPARK MAX · Raspberry Pi · Arduino</text>
+  <text class="sans sval" x="426" y="384">STM32 · FPGA · WPILib · Talon FX · SPARK MAX · Raspberry Pi · SiPM</text>
   <text class="sans slbl" x="290" y="403">scientific</text>
   <text class="sans sval" x="426" y="403">ROOT · Geant4 · PyMC · SciPy · Matplotlib · Jupyter · pandas</text>
 
