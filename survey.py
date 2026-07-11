@@ -29,8 +29,9 @@ import requests
 from dateutil import relativedelta
 from lxml import etree
 
-HEADERS = {"authorization": "token " + os.environ.get("ACCESS_TOKEN", "")}
-USER_NAME = os.environ.get("USER_NAME") or "KarthikSubramanian07"
+ACCESS_TOKEN = os.environ.get("ACCESS_TOKEN", "").strip()
+USER_NAME = (os.environ.get("USER_NAME") or "KarthikSubramanian07").strip()
+HEADERS = {"authorization": "token " + ACCESS_TOKEN} if ACCESS_TOKEN else {}
 BIRTHDAY = datetime.datetime(2007, 6, 19)
 # First commit / start of the GitHub journey. Matches the /dev page on the
 # karthiksubramanian07.github.io site so both surfaces report identical numbers.
@@ -211,6 +212,7 @@ def get_weather():
 def find_and_replace(root, element_id, new_text):
     element = root.find(f".//*[@id='{element_id}']")
     if element is not None:
+        # Assign raw text; lxml escapes XML-significant chars on serialize.
         element.text = str(new_text)
     else:
         print(f"  [warn] no SVG element with id='{element_id}'")
@@ -232,7 +234,16 @@ def format_number(n):
     return "{:,}".format(int(n))
 
 
+def require_access_token():
+    if not ACCESS_TOKEN:
+        raise SystemExit(
+            "ACCESS_TOKEN is required (GitHub PAT with repo + read:user). "
+            "Refusing to call the GraphQL API with an empty Authorization header."
+        )
+
+
 def main():
+    require_access_token()
     print("Querying GitHub…")
 
     age_data = daily_readme(BIRTHDAY)
