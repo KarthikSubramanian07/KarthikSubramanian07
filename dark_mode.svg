@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="880" height="500" viewBox="0 0 880 500" role="img" aria-label="karthik subramanian — GitHub profile">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="870" height="500" viewBox="0 0 870 500" role="img" aria-label="karthik subramanian — GitHub profile">
   <style>
     .serif { font-family: Georgia, 'Times New Roman', 'Iowan Old Style', serif; }
     .sans  { font-family: 'Helvetica Neue', Helvetica, Arial, 'Segoe UI', sans-serif; }
@@ -9,7 +9,7 @@
     .kval  { fill:#ECE8DF; font-size:13px; }
     .num   { fill:#ECE8DF; font-size:26px; font-variant-numeric:tabular-nums; }
     .slbl  { fill:#D97757; font-size:10px; letter-spacing:1.4px; }
-    .sval  { fill:#CFC9BC; font-size:13px; }
+    .sval  { fill:#CFC9BC; font-size:12px; }
     .muted { fill:#A39C8C; font-size:11.5px; }
     .accent{ fill:#D97757; }
 
@@ -27,7 +27,7 @@
     }
   </style>
 
-  <rect x="0" y="0" width="880" height="500" rx="22" fill="#1C1B17"/>
+  <rect x="0" y="0" width="870" height="500" rx="22" fill="#1C1B17"/>
 
   <!-- ════════ Left: animated space illustration ════════ -->
   <g class="accent">
@@ -67,40 +67,42 @@
   <text class="serif name" x="288" y="88">karthik subramanian</text>
   <text class="sans role" x="290" y="111">eecs @ uc berkeley<tspan fill="#A39C8C">  ·  </tspan><tspan class="accent">regents' scholar</tspan><tspan fill="#A39C8C">  ·  founder · engineer · researcher</tspan></text>
 
-  <line x1="290" y1="129" x2="850" y2="129" stroke="#33312B" stroke-width="1.5"/>
+  <line x1="290" y1="129" x2="840" y2="129" stroke="#33312B" stroke-width="1.5"/>
 
   <text class="sans klbl" x="290" y="156">age</text>
   <text class="sans kval" id="age_data" x="372" y="157">19 years, 0 months, 10 days</text>
   <text class="sans klbl" x="290" y="178">weather</text>
   <text class="sans kval" id="weather_data" x="372" y="179">☀️ 68°F · clear sky</text>
 
-  <text class="serif num" id="commit_data" x="290" y="224">968</text>
-  <text class="sans klbl" x="291" y="242">commits</text>
-  <text class="serif num" id="contrib_data" x="406" y="224">705</text>
-  <text class="sans klbl" x="407" y="242">this year</text>
-  <text class="serif num" id="repo_data" x="556" y="224">35</text>
-  <text class="sans klbl" x="557" y="242">repos</text>
-  <text class="serif num" id="years_data" x="672" y="224">4</text>
-  <text class="sans klbl" x="673" y="242">on github</text>
+  <text class="serif num" id="commit_data" x="290" y="224">1,266</text>
+  <text class="sans klbl" x="291" y="242">contributions</text>
+  <text class="serif num" id="contrib_data" x="452" y="224">567</text>
+  <text class="sans klbl" x="453" y="242">last 30 days</text>
+  <text class="serif num" id="repo_data" x="596" y="224">43</text>
+  <text class="sans klbl" x="597" y="242">repos</text>
+  <text class="serif num" id="years_data" x="724" y="224">5</text>
+  <text class="sans klbl" x="725" y="242">years on github</text>
 
-  <line x1="290" y1="266" x2="850" y2="266" stroke="#33312B" stroke-width="1.5"/>
+  <line x1="290" y1="266" x2="840" y2="266" stroke="#33312B" stroke-width="1.5"/>
 
-  <text class="sans slbl" x="290" y="290">languages</text>
-  <text class="sans sval" x="426" y="290">Rust · Python · TypeScript · C++ · Swift · Kotlin</text>
-  <text class="sans slbl" x="290" y="310">web &amp; realtime</text>
-  <text class="sans sval" x="426" y="310">Next.js · React Native · WebRTC · LiveKit · Three.js</text>
-  <text class="sans slbl" x="290" y="330">backends &amp; data</text>
-  <text class="sans sval" x="426" y="330">PostgreSQL · pgvector · GraphQL · FastAPI · Redis</text>
-  <text class="sans slbl" x="290" y="350">cloud &amp; infra</text>
-  <text class="sans sval" x="426" y="350">AWS · Kubernetes · Docker · BigQuery · Cloudflare</text>
-  <text class="sans slbl" x="290" y="370">ai / ml &amp; agents</text>
-  <text class="sans sval" x="426" y="370">PyTorch · CUDA · Claude · YOLO · Whisper · Groq</text>
-  <text class="sans slbl" x="290" y="390">hardware</text>
-  <text class="sans sval" x="426" y="390">STM32 · FPGA · Arduino · Raspberry Pi · Talon FX</text>
+  <text class="sans slbl" x="290" y="289">languages</text>
+  <text class="sans sval" x="426" y="289">Rust · Python · TypeScript · C++ · C · Swift · Kotlin · Java</text>
+  <text class="sans slbl" x="290" y="308">web &amp; realtime</text>
+  <text class="sans sval" x="426" y="308">Next.js · React Native · WebRTC · LiveKit · Three.js · Mapbox · Svelte</text>
+  <text class="sans slbl" x="290" y="327">backends &amp; data</text>
+  <text class="sans sval" x="426" y="327">PostgreSQL · pgvector · GraphQL · FastAPI · Redis · PySpark · Polars</text>
+  <text class="sans slbl" x="290" y="346">cloud &amp; infra</text>
+  <text class="sans sval" x="426" y="346">AWS · Kubernetes · Docker · BigQuery · Cloudflare · Vercel · Dagster</text>
+  <text class="sans slbl" x="290" y="365">ai / ml &amp; agents</text>
+  <text class="sans sval" x="426" y="365">PyTorch · CUDA · TensorFlow · Claude · YOLO · Whisper · Hugging Face</text>
+  <text class="sans slbl" x="290" y="384">hardware</text>
+  <text class="sans sval" x="426" y="384">STM32 · FPGA · WPILib · Talon FX · SPARK MAX · Raspberry Pi · Arduino</text>
+  <text class="sans slbl" x="290" y="403">scientific</text>
+  <text class="sans sval" x="426" y="403">ROOT · Geant4 · PyMC · SciPy · Matplotlib · Jupyter · pandas</text>
 
-  <text class="sans muted" x="290" y="418">writing · stargazing · philosophy · board games · travel</text>
-  <text class="sans slbl" x="290" y="441">email</text>
-  <text class="sans sval" x="372" y="441" font-size="12px">karthik [dot] subramanian [at] berkeley [dot] edu</text>
-  <text class="sans slbl" x="290" y="461">links</text>
-  <text class="sans sval" x="372" y="461" font-size="12px">/in/karthik-subramanian-07 · @winner.karthik · karthik07</text>
+  <text class="sans muted" x="290" y="429">writing · stargazing · philosophy · board games · travel</text>
+  <text class="sans slbl" x="290" y="451">email</text>
+  <text class="sans sval" x="372" y="451" font-size="12px">karthik [dot] subramanian [at] berkeley [dot] edu</text>
+  <text class="sans slbl" x="290" y="470">links</text>
+  <text class="sans sval" x="372" y="470" font-size="12px">/in/karthik-subramanian-07 · @winner.karthik · karthik07</text>
 </svg>

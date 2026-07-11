@@ -2,10 +2,13 @@
 """
 survey.py — Spacecraft systems readout for KarthikSubramanian07's GitHub profile.
 
-Pulls LIVE data and writes it into light_mode.svg / dark_mode.svg:
-  - GitHub GraphQL API v4: total commit contributions (all time, incl. org/
-    collaborator repos), total stars across owned repos, total repos,
-    account age in years.
+Pulls LIVE data and writes it into light_mode.svg / dark_mode.svg. The four
+stat-band numbers mirror the /dev page on karthiksubramanian07.github.io so
+both surfaces always agree:
+  - GitHub GraphQL API v4: all-time contributions (walked in 365-day windows
+    from the first commit, incl. org/collaborator repos), contributions in the
+    trailing 30 days, owned non-fork repos (private included via the PAT), and
+    years on GitHub (rounded from the first commit).
   - Open-Meteo (no key): current temperature (F) + sky description at Soda Hall.
   - Age computed from birthday with dateutil.relativedelta.
 
@@ -29,6 +32,9 @@ from lxml import etree
 HEADERS = {"authorization": "token " + os.environ.get("ACCESS_TOKEN", "")}
 USER_NAME = os.environ.get("USER_NAME") or "KarthikSubramanian07"
 BIRTHDAY = datetime.datetime(2007, 6, 19)
+# First commit / start of the GitHub journey. Matches the /dev page on the
+# karthiksubramanian07.github.io site so both surfaces report identical numbers.
+FIRST_COMMIT = datetime.datetime(2021, 8, 1, tzinfo=timezone.utc)
 
 # Soda Hall, Berkeley
 WEATHER_LAT = 37.8755
@@ -36,7 +42,7 @@ WEATHER_LON = -122.2596
 
 RETRY_STATUS = {502, 503, 504, 429}
 MAX_RETRIES = 5
-QUERY_COUNT = {"user_getter": 0, "graph_commits": 0, "graph_repos_stars": 0}
+QUERY_COUNT = {"graph_commits": 0, "graph_repos_stars": 0}
 
 
 def query_count(funct_id):
@@ -94,21 +100,7 @@ def daily_readme(birthday):
     )
 
 
-def account_age_years(created_at):
-    diff = relativedelta.relativedelta(datetime.datetime.today(), created_at)
-    return diff.years
-
-
 # ── GitHub ────────────────────────────────────────────────────────────────────
-def user_getter(username):
-    """Return the account's createdAt timestamp."""
-    query_count("user_getter")
-    query = """
-    query($login: String!){ user(login: $login) { createdAt } }"""
-    request = simple_request(user_getter.__name__, query, {"login": username})
-    return request.json()["data"]["user"]["createdAt"]
-
-
 def graph_commits(start_date, end_date):
     """Total contributions in [start_date, end_date] (commits, PRs, issues, reviews)."""
     query_count("graph_commits")
@@ -129,16 +121,18 @@ def graph_commits(start_date, end_date):
     )
 
 
-def total_commits(created_at):
-    """Sum contributions year-by-year from account creation to now."""
-    created = datetime.datetime.strptime(created_at, "%Y-%m-%dT%H:%M:%SZ").replace(
-        tzinfo=timezone.utc
-    )
+def total_contributions():
+    """All-time contributions, walking 365-day windows from FIRST_COMMIT to now.
+
+    Mirrors the io site's update-stats.mjs so the profile card and the /dev page
+    report the same all-time number.
+    """
     now = datetime.datetime.now(timezone.utc)
     total = 0
-    window_start = created
+    window_start = FIRST_COMMIT
+    step = datetime.timedelta(days=365)
     while window_start < now:
-        window_end = min(window_start + relativedelta.relativedelta(years=1), now)
+        window_end = min(window_start + step, now)
         total += graph_commits(
             window_start.strftime("%Y-%m-%dT%H:%M:%SZ"),
             window_end.strftime("%Y-%m-%dT%H:%M:%SZ"),
@@ -147,17 +141,37 @@ def total_commits(created_at):
     return total
 
 
+def last_30_days():
+    """Contributions in the trailing 30 days (matches the /dev page)."""
+    now = datetime.datetime.now(timezone.utc)
+    start = now - datetime.timedelta(days=30)
+    return graph_commits(
+        start.strftime("%Y-%m-%dT%H:%M:%SZ"),
+        now.strftime("%Y-%m-%dT%H:%M:%SZ"),
+    )
+
+
+def github_years():
+    """Years on GitHub, rounded from FIRST_COMMIT (matches the /dev page)."""
+    now = datetime.datetime.now(timezone.utc)
+    return round((now - FIRST_COMMIT).days / 365.25)
+
+
 def total_repos():
-    """Total number of repositories the user owns."""
+    """Repositories owned by the token holder (incl. private), excluding forks.
+
+    Uses `viewer` so the PAT sees private + org-owned repos, matching the /dev
+    page's count.
+    """
     query_count("graph_repos_stars")
     query = """
-    query ($login: String!) {
-        user(login: $login) {
-            repositories(ownerAffiliations: OWNER) { totalCount }
+    query {
+        viewer {
+            repositories(ownerAffiliations: OWNER, isFork: false) { totalCount }
         }
     }"""
-    request = simple_request("total_repos", query, {"login": USER_NAME})
-    return request.json()["data"]["user"]["repositories"]["totalCount"]
+    request = simple_request("total_repos", query, {})
+    return request.json()["data"]["viewer"]["repositories"]["totalCount"]
 
 
 # ── Weather (Open-Meteo, no API key) ──────────────────────────────────────────
@@ -220,15 +234,11 @@ def format_number(n):
 
 def main():
     print("Querying GitHub…")
-    created_at = user_getter(USER_NAME)
-    created_dt = datetime.datetime.strptime(created_at, "%Y-%m-%dT%H:%M:%SZ")
 
     age_data = daily_readme(BIRTHDAY)
-    years_data = str(account_age_years(created_dt))
-    commit_data = format_number(total_commits(created_at))
-    now = datetime.datetime.now(timezone.utc)
-    year_ago = (now - relativedelta.relativedelta(years=1)).strftime("%Y-%m-%dT%H:%M:%SZ")
-    contrib_data = format_number(graph_commits(year_ago, now.strftime("%Y-%m-%dT%H:%M:%SZ")))
+    years_data = str(github_years())
+    commit_data = format_number(total_contributions())
+    contrib_data = format_number(last_30_days())
     repo_data = format_number(total_repos())
 
     print("Fetching weather…")
@@ -242,13 +252,13 @@ def main():
             print(f"  [warn] {svg} not found; skipping")
 
     print("\nDone.")
-    print(f"  Age:       {age_data}")
-    print(f"  Commits:   {commit_data}")
-    print(f"  This year: {contrib_data}")
-    print(f"  Repos:     {repo_data}")
-    print(f"  Years:     {years_data}")
-    print(f"  Weather:   {weather_data}")
-    print(f"  Queries:   {QUERY_COUNT}")
+    print(f"  Age:           {age_data}")
+    print(f"  Contributions: {commit_data}")
+    print(f"  Last 30 days:  {contrib_data}")
+    print(f"  Repos:         {repo_data}")
+    print(f"  Years:         {years_data}")
+    print(f"  Weather:       {weather_data}")
+    print(f"  Queries:       {QUERY_COUNT}")
 
 
 if __name__ == "__main__":
