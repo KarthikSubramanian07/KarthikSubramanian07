@@ -7,7 +7,7 @@ stat-band numbers mirror the /dev page on karthiksubramanian07.github.io so
 both surfaces always agree:
   - GitHub GraphQL API v4: all-time contributions (walked in 365-day windows
     from the first commit, incl. org/collaborator repos), contributions in the
-    trailing 30 days, owned non-fork repos (private included via the PAT), and
+    trailing 14 days, owned non-fork repos (private included via the PAT), and
     years on GitHub (rounded from the first commit).
   - Open-Meteo (no key): current temperature (F) + sky description at Soda Hall.
   - Age computed from birthday with dateutil.relativedelta.
@@ -142,10 +142,10 @@ def total_contributions():
     return total
 
 
-def last_30_days():
-    """Contributions in the trailing 30 days (matches the /dev page)."""
+def last_14_days():
+    """Contributions in the trailing 14 days (matches the /dev page)."""
     now = datetime.datetime.now(timezone.utc)
-    start = now - datetime.timedelta(days=30)
+    start = now - datetime.timedelta(days=14)
     return graph_commits(
         start.strftime("%Y-%m-%dT%H:%M:%SZ"),
         now.strftime("%Y-%m-%dT%H:%M:%SZ"),
@@ -250,7 +250,7 @@ def main():
     age_data = daily_readme(BIRTHDAY)
     years_data = str(github_years())
     commit_data = format_number(total_contributions())
-    contrib_data = format_number(last_30_days())
+    contrib_data = format_number(last_14_days())
     repo_data = format_number(total_repos())
 
     print("Fetching weather…")
@@ -266,7 +266,7 @@ def main():
     print("\nDone.")
     print(f"  Age:           {age_data}")
     print(f"  Contributions: {commit_data}")
-    print(f"  Last 30 days:  {contrib_data}")
+    print(f"  Last 14 days:  {contrib_data}")
     print(f"  Repos:         {repo_data}")
     print(f"  Years:         {years_data}")
     print(f"  Weather:       {weather_data}")
