@@ -40,9 +40,23 @@
     <circle class="star" cx="178" cy="40" r="1.3" style="animation-delay:2.6s"/>
     <circle class="star" cx="250" cy="200" r="1.4" style="animation-delay:0.9s"/>
     <circle class="star" cx="28" cy="150" r="1.3" style="animation-delay:3.0s"/>
+    <circle class="star" cx="140" cy="58" r="1.3" style="animation-delay:0.3s"/>
+    <circle class="star" cx="74" cy="182" r="1.4" style="animation-delay:2.3s"/>
+    <circle class="star" cx="32" cy="360" r="1.6" style="animation-delay:0.8s"/>
+    <circle class="star" cx="198" cy="244" r="1.5" style="animation-delay:1.4s"/>
+    <circle class="star" cx="158" cy="436" r="1.3" style="animation-delay:2.8s"/>
+    <circle class="star" cx="108" cy="468" r="1.5" style="animation-delay:1.2s"/>
+    <circle class="star" cx="238" cy="356" r="1.4" style="animation-delay:0.6s"/>
+    <circle class="star" cx="48" cy="104" r="1.2" style="animation-delay:3.2s"/>
+    <circle class="star" cx="228" cy="86" r="1.6" style="animation-delay:1.8s"/>
+    <circle class="star" cx="186" cy="470" r="1.3" style="animation-delay:2.1s"/>
+    <circle class="star" cx="16" cy="300" r="1.2" style="animation-delay:1.5s"/>
+    <circle class="star" cx="250" cy="470" r="1.3" style="animation-delay:0.4s"/>
   </g>
   <path class="accent star" style="animation-delay:0.7s" d="M168 150 C168 158 168 158 176 160 C168 162 168 162 168 170 C168 162 168 162 160 160 C168 158 168 158 168 150 Z"/>
   <path class="accent star" style="animation-delay:1.9s" d="M52 332 C52 338 52 338 58 340 C52 342 52 342 52 348 C52 342 52 342 46 340 C52 338 52 338 52 332 Z"/>
+  <path class="accent star" style="animation-delay:2.4s" d="M36 410 C36 417 36 417 43 419 C36 421 36 421 36 428 C36 421 36 421 29 419 C36 417 36 417 36 410 Z"/>
+  <path class="accent star" style="animation-delay:1.1s" d="M224 150 C224 157 224 157 231 159 C224 161 224 161 224 168 C224 161 224 161 217 159 C224 157 224 157 224 150 Z"/>
 
   <g class="shoot">
     <line x1="40" y1="60" x2="64" y2="72" stroke="#D97757" stroke-width="1.6" stroke-linecap="round"/>
