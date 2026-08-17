@@ -82,9 +82,9 @@
   <line x1="290" y1="129" x2="840" y2="129" stroke="#33312B" stroke-width="1.5"/>
 
   <text class="sans klbl" x="290" y="156">age</text>
-  <text class="sans kval" id="age_data" x="372" y="157">19 years, 1 month, 28 days</text>
+  <text class="sans kval" id="age_data" x="372" y="157">19 years, 1 month, 29 days</text>
   <text class="sans klbl" x="290" y="178">weather</text>
-  <text class="sans kval" id="weather_data" x="372" y="179">🌫️ 59°F · fog</text>
+  <text class="sans kval" id="weather_data" x="372" y="179">🌤️ 62°F · mainly clear</text>
 
   <text class="serif num" id="commit_data" x="290" y="224">2,117</text>
   <text class="sans klbl" x="291" y="242">contributions</text>
