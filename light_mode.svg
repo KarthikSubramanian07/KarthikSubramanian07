@@ -98,19 +98,19 @@
   <line x1="290" y1="266" x2="840" y2="266" stroke="#E6E3DA" stroke-width="1.5"/>
 
   <text class="sans slbl" x="290" y="289">languages</text>
-  <text class="sans sval" x="426" y="289">Rust · Python · TypeScript · C++ · Swift · Kotlin · Java</text>
+  <text class="sans sval" x="426" y="289">Rust · C++ · Python · TypeScript · Swift · Kotlin · Java · SQL · C · JavaScript</text>
   <text class="sans slbl" x="290" y="308">web &amp; realtime</text>
-  <text class="sans sval" x="426" y="308">Next.js · React Native · WebRTC · LiveKit · Three.js · Mapbox · Deck.gl</text>
+  <text class="sans sval" x="426" y="308">WebAssembly · WebRTC · LiveKit · Three.js · Deck.gl · Next.js · React Native</text>
   <text class="sans slbl" x="290" y="327">backends &amp; data</text>
-  <text class="sans sval" x="426" y="327">PostgreSQL · pgvector · GraphQL · FastAPI · Redis · PySpark · Polars</text>
+  <text class="sans sval" x="426" y="327">Tokio · SpacetimeDB · NATS · PostgreSQL · pgvector · FastAPI · Polars · Zod</text>
   <text class="sans slbl" x="290" y="346">cloud &amp; infra</text>
-  <text class="sans sval" x="426" y="346">AWS · Kubernetes · Docker · BigQuery · Cloudflare · OpenTelemetry · Dagster</text>
+  <text class="sans sval" x="426" y="346">AWS · Terraform · Cloudflare Workers · Kubernetes · Dagster · BigQuery</text>
   <text class="sans slbl" x="290" y="365">ai / ml</text>
-  <text class="sans sval" x="426" y="365">PyTorch · CUDA · TensorFlow · XGBoost · YOLO · OpenCV · Hugging Face</text>
+  <text class="sans sval" x="426" y="365">PyTorch · CUDA · MCP · Hugging Face · YOLO · OpenCV · XGBoost · SAM</text>
   <text class="sans slbl" x="290" y="384">hardware</text>
-  <text class="sans sval" x="426" y="384">STM32 · FPGA · WPILib · Talon FX · SPARK MAX · Raspberry Pi · SiPM</text>
+  <text class="sans sval" x="426" y="384">ROS 2 · PX4 · MAVLink · FPGA · STM32 · SiPM · Raspberry Pi · ArduPilot</text>
   <text class="sans slbl" x="290" y="403">scientific</text>
-  <text class="sans sval" x="426" y="403">ROOT · Geant4 · PyMC · SciPy · Matplotlib · Jupyter · pandas</text>
+  <text class="sans sval" x="426" y="403">Geant4 · ROOT · Astropy · PyMC · lmfit · SciPy · pandas · NumPy · SALib</text>
 
   <text class="sans muted" x="290" y="429">writing · stargazing · board games · travel · history &amp; geography · film &amp; tv</text>
   <text class="sans slbl" x="290" y="451">email</text>
