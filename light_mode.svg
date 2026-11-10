@@ -1,14 +1,16 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="870" height="500" viewBox="0 0 870 500" role="img" aria-label="karthik subramanian — GitHub profile">
+  <title>Karthik Subramanian — GitHub profile</title>
+  <desc>Spacecraft systems readout card showing statistics, technical skills, and contact links.</desc>
   <style>
     .serif { font-family: Georgia, 'Times New Roman', 'Iowan Old Style', serif; }
     .sans  { font-family: 'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', Arimo, 'Segoe UI', sans-serif; }
     .name  { fill:#1A1916; font-size:34px; letter-spacing:0.2px; }
     .role  { fill:#6E6A60; font-size:13.5px; }
-    .klbl  { fill:#9A9488; font-size:10px; letter-spacing:1.4px; }
+    .klbl  { fill:#706B60; font-size:10px; letter-spacing:1.4px; }
     .kval  { fill:#1A1916; font-size:13px; }
     .num   { fill:#1A1916; font-size:26px; font-variant-numeric:tabular-nums; }
-    .slbl  { fill:#D97757; font-size:10px; letter-spacing:1.4px; }
+    .slbl  { fill:#B25232; font-size:10px; letter-spacing:1.4px; }
     .sval  { fill:#34322B; font-size:12px; }
     .muted { fill:#6E6A60; font-size:11.5px; }
     .accent{ fill:#D97757; }
